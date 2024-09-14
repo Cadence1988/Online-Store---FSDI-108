@@ -9,7 +9,7 @@ function Product(props) {
 
     return (
         <div className='product'>
-            <img src="./images/miss.png" alt="" />
+            <img src="https://cdn2.vectorstock.com/i/1000x1000/70/01/no-image-symbol-missing-available-icon-gallery-vector-42607001.jpg" alt="" />
 
             <h5>{props.title}</h5>
             <label>${props.price}</label>

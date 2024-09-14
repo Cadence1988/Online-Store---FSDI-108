@@ -1,3 +1,6 @@
-.App footer{
-    
+.footer {
+    background-color: darkcyan;
+    padding: 30px;
+    max-height: 30px;
+    text-align: center;
 }
