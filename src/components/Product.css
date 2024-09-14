@@ -1,10 +1,11 @@
 .product {
     border: 1px solid #333;
     padding: 10px;
-    height: 380px;
+    height: 450px;
     width: 300px;
     display: inline-block;
     margin: 12px;
+    text-align: center;
 }
 img {
     max-width: 100%; /* Ensure the image doesn’t exceed the width of the parent */
