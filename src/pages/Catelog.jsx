@@ -1,17 +1,21 @@
 import Product from '../components/Product';
 import './Catalog.css';
+import { catalog as Products, Category } from '../services/Data';
+import { Button } from 'bootstrap/dist/js/bootstrap.min';
 
 function Catalog() {
     return (
         <div className='catalog'>
             <h1>Our amazing catalog</h1>
 
-            <Product title='Tomatoes' price='6.34'></Product>
-            <Product title='Banana' price='4.32'></Product>
-            <Product title='Strawberry' price='8.34'></Product>
-            <Product title='Blueberry' price='9.45'></Product>
-            <Product title='Raspberry' price='9.42'></Product>
+            <div className='filters'>
+            {Category.map(cat => <button className='btn btn-sm btn-outline-dark'>{cat}</button>)}
+            </div>
+
+            {Products.map(prod => <Product data={prod}></Product>)}
+
         </div>
+
     );
 }
 

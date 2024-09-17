@@ -9,14 +9,16 @@ function Product(props) {
 
     return (
         <div className='product'>
-            <img src="https://cdn2.vectorstock.com/i/1000x1000/70/01/no-image-symbol-missing-available-icon-gallery-vector-42607001.jpg" alt="" />
+            <img src={props.data.image} alt="" />
 
-            <h5>{props.title}</h5>
-            <label>${props.price}</label>
+            <h5>{props.data.title}</h5>
+            <label>${props.data.price}</label>
 
+            <div className='controls'>
             <QuantityPicker></QuantityPicker>
 
-            <button onClick={AddtoCart}>Add</button>
+            <button className='btn btn-sm btn-primary' onClick={AddtoCart}>Add</button>
+            </div>
         </div>
     );
 }

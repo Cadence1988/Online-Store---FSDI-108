@@ -1,5 +1,6 @@
 .product {
-    border: 1px solid #333;
+    border: 2px solid #4c5e9c;
+    border-radius: 4px;
     padding: 10px;
     height: 450px;
     width: 300px;
@@ -7,8 +8,23 @@
     margin: 12px;
     text-align: center;
 }
-img {
+.product:hover{
+    border-color: rgb(148, 249, 7);
+    box-shadow: -20px 13px 12px 7px rgba(0,0,0,0.42);
+-webkit-box-shadow: -20px 13px 12px 7px rgba(0,0,0,0.42);
+-moz-box-shadow: -20px 13px 12px 7px rgba(0,0,0,0.42);
+}
+.product img {
     max-width: 100%; /* Ensure the image doesn’t exceed the width of the parent */
-    height: auto;    /* Maintain the image’s aspect ratio */
+    height: 300px;
+    width: auto;    /* Maintain the image’s aspect ratio */
     display: block;  /* Remove any extra space caused by inline images */
 }
+.product .controls{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 12px;
+   
+}
+
+

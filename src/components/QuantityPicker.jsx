@@ -24,7 +24,7 @@ function QuantityPicker(){
 
             <label>{quantity}</label>
 
-            <button className='btn btn-sm btn-primary' onClick={handleIncrease}>+</button>
+            <button className='btn btn-sm btn-secondary' onClick={handleIncrease}>+</button>
 
         </div>
     );

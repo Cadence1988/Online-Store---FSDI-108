@@ -1,7 +1,10 @@
 .catalog {
     min-height: 600px;
-    background-color: blueviolet;
+    background-color: #f0e1f2;
 
+}
+.catalog .filters button{
+   margin: 6px 4px; 
 }
 
 .catalog h1 {
