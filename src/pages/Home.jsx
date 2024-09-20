@@ -1,10 +1,15 @@
 import './Home.css';
 
+import { Link } from 'react-router-dom';
+
 function Home() {
     return (
-        <div className='home'>
+        <div className='home page'>
             <div className='text'>
             <h2>Welcome to Organika store</h2>
+            
+            <Link className='btn btn-large '>
+            </Link>
             </div>
 
             <img src="https://png.pngtree.com/background/20210715/original/pngtree-hanging-string-lights-shiny-background-picture-image_1274866.jpg" alt="" />

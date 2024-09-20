@@ -8,7 +8,7 @@ function Product(props) {
     }
 
     return (
-        <div className='product'>
+        <div className='product page'>
             <img src={props.data.image} alt="" />
 
             <h5>{props.data.title}</h5>
@@ -18,6 +18,7 @@ function Product(props) {
             <QuantityPicker></QuantityPicker>
 
             <button className='btn btn-sm btn-primary' onClick={AddtoCart}>Add</button>
+            <i class="fa-solid fa-cart-shopping"></i>
             </div>
         </div>
     );

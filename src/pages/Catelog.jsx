@@ -5,7 +5,7 @@ import { Button } from 'bootstrap/dist/js/bootstrap.min';
 
 function Catalog() {
     return (
-        <div className='catalog'>
+        <div className='catalog page'>
             <h1>Our amazing catalog</h1>
 
             <div className='filters'>
