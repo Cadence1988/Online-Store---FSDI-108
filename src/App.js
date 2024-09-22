@@ -7,29 +7,32 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Admin from "./pages/Admin";
 import Contact from "./pages/Contact";
+import { UserProvider } from "./services/UserContext";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
-import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Navbar></Navbar>
+    <UserProvider>
+      <BrowserRouter>
+        <div className="App">
+          <Navbar></Navbar>
 
-        <Routes>
-          <Route path="/" element={<Home></Home>} />
-          <Route path="/Catalog" element={<Catalog></Catalog>} />
-          <Route path="/About" element={<About></About>} />
-          <Route path="/Admin" element={<Admin></Admin>} />
-          <Route path="/Contact" element={<Contact></Contact>} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home></Home>} />
+            <Route path="/Catalog" element={<Catalog></Catalog>} />
+            <Route path="/About" element={<About></About>} />
+            <Route path="/Admin" element={<Admin></Admin>} />
+            <Route path="/Contact" element={<Contact></Contact>} />
+          </Routes>
 
-        <Footer></Footer>
-      </div>
-    </BrowserRouter>
+          <Footer></Footer>
+        </div>
+      </BrowserRouter>
+    </UserProvider>
   );
 }
 

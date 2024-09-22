@@ -1,7 +1,12 @@
 import './Navbar.css';
 import { Link } from 'react-router-dom';
+import UserContext from '../services/UserContext';
+import { UserContext } from '../services/UserContext';
+import { useContext } from 'react';
 
 function Navbar() {
+    const {user} = useContext(UserContext);
+
     return (
         <nav className="navbar navbar-expand-lg bg-body-darkcyan">
   <div className="container-fluid">
@@ -44,6 +49,10 @@ function Navbar() {
           <a className="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
+      <div className='navbar-text me=3'>
+        Welcome, {user.name}
+      </div>
+      <span className='fas fa-shopping-cart'></span> {/*shopping cart icon*/}
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">Search</button>
