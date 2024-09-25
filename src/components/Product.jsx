@@ -10,25 +10,9 @@ function Product(props) {
         setTotalPrice(updatedTotal);
     }
 
-    /**function AddtoCart(){
+    function AddtoCart(){
         console.log('Added to Cart');
     }
-    const [user, setUser] = useState({ userId: 123, name: "Sergio"});
-
-    function addProductToCart() {
-        console.log("global add");
-    }
-
-    function removeProductFromCart() {
-    }
-
-    function clearCart() {        
-    }
-    user: user,
-        addProductToCart: addProductToCart,
-        removeProductFromCart: removeProductFromCart,
-        clearCart: clearCart
-    */
 
     return (
         <div className='product page'>
@@ -60,3 +44,21 @@ export default Product;
  * on Catalog page
  * render 5 Product tags
  */
+
+/**
+    const [user, setUser] = useState({ userId: 123, name: "Sergio"});
+
+    function addProductToCart() {
+        console.log("global add");
+    }
+
+    function removeProductFromCart() {
+    }
+
+    function clearCart() {        
+    }
+    user: user,
+        addProductToCart: addProductToCart,
+        removeProductFromCart: removeProductFromCart,
+        clearCart: clearCart
+    */
