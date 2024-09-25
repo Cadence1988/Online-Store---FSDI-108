@@ -1,5 +1,5 @@
 import './Product.css';
-import { useState } from 'react';
+import {useContext, useState } from 'react';
 import QuantityPicker from './QuantityPicker';
 
 function Product(props) {
@@ -10,9 +10,25 @@ function Product(props) {
         setTotalPrice(updatedTotal);
     }
 
-    function AddtoCart(){
+    /**function AddtoCart(){
         console.log('Added to Cart');
     }
+    const [user, setUser] = useState({ userId: 123, name: "Sergio"});
+
+    function addProductToCart() {
+        console.log("global add");
+    }
+
+    function removeProductFromCart() {
+    }
+
+    function clearCart() {        
+    }
+    user: user,
+        addProductToCart: addProductToCart,
+        removeProductFromCart: removeProductFromCart,
+        clearCart: clearCart
+    */
 
     return (
         <div className='product page'>

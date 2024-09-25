@@ -1,5 +1,6 @@
 // src/context/UserContext.js
 import { createContext, useState } from "react";
+import { useContext, useState} from "react";
 
 // Create a context for the user
 export const UserContext = createContext();
