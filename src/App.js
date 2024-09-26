@@ -7,7 +7,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Admin from "./pages/Admin";
 import Contact from "./pages/Contact";
-import { UserProvider } from "./services/UserContext";
+import GlobalProvider from "./state/GlobalProvider";
+import Cart from "./pages/Cart";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -16,7 +17,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <UserProvider>
+    <GlobalProvider>
       <BrowserRouter>
         <div className="App">
           <Navbar></Navbar>
@@ -27,12 +28,13 @@ function App() {
             <Route path="/About" element={<About></About>} />
             <Route path="/Admin" element={<Admin></Admin>} />
             <Route path="/Contact" element={<Contact></Contact>} />
+            <Route path="/Cart" element={<Cart></Cart>} />
           </Routes>
 
           <Footer></Footer>
         </div>
       </BrowserRouter>
-    </UserProvider>
+    </GlobalProvider>
   );
 }
 

@@ -1,10 +1,10 @@
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../services/UserContext';
 import { useContext } from 'react';
+import DataContext from '../state/DataContext';
 
 function Navbar() {
-    const {user} = useContext(UserContext);
+    const {user} = useContext(DataContext);
 
     return (
         <nav className="navbar navbar-expand-lg bg-body-darkcyan">

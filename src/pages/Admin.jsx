@@ -84,6 +84,7 @@ function Admin(){
                 <div className='save'><button type="button" class="btn btn-dark" onClick={saveCoupon}>Save coupon</button></div>
             </div>
             </div>
+          /** */
         </div>
 
         </div>
@@ -107,3 +108,12 @@ export default Admin;
  * call the fn on the click event of the save button
  */
 
+/**  /**</div> {allCoupons.map(cp => <li{cp.code} - {cp.discount}></li>)}**/
+/**list the products (img, title, price)
+ * 
+ * create a list for products
+ * on save, add product obj to the list (3 steps)
+ * map the product to li velow the product form
+ * 
+ * css everything
+ */

@@ -1,9 +1,12 @@
 import './Product.css';
 import {useContext, useState } from 'react';
 import QuantityPicker from './QuantityPicker';
+import DataContext from '../state/DataContext';
 
 function Product(props) {
-    const [totalPrice, setTotalPrice] = useState(props.data.price);
+   
+   const [totalPrice, setTotalPrice] = useState(props.data.price);
+    
 
     function handleQuantityChange(quantity) {
         const updatedTotal = props.data.price * quantity;
