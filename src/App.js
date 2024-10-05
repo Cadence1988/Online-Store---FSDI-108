@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Catalog from "./pages/Catelog";
+import Catalog from "./pages/Catalog";
 import Footer from "./components/footer";
 import Home from "./pages/Home";
 import About from "./pages/About";

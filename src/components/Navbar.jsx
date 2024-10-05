@@ -31,6 +31,9 @@ function Navbar() {
         <Link className="nav-link active" aria-current="page" to="/Contact">Contact</Link>
         </li>
         <li className="nav-item">
+        <Link className="nav-link active" aria-current="page" to="/Cart">Cart</Link>
+        </li>
+        <li className="nav-item">
           <a className="nav-link" href="#">Link</a>
         </li>
         <li className="nav-item dropdown">

@@ -5,15 +5,33 @@ import './Cart.css';
 function Cart() {
     const { cart } = useContext(DataContext); // Access the cart from context
 
+    function getTotal() {
+        let total = 0;
+        for (let i = 0; i< cart.length; i++) {
+            const prod = cart[i];
+            total += (prod.quantity * prod.price);
+        }
+
+        return total.toFixed(2);
+    }
+
     return (
         <div className='cart page'>
             <h1>Got everything?</h1>
-            <h4>
+            <h5>
                 Let's proceed to payment for your <b>{cart.length}</b> items.
-            </h4>
+            </h5>
 
             <div className='parent'>
-                <div className='list'>
+                <div className='list'> 
+                    {
+                     cart.length == 0 ?   
+                     <div className='alert alert-primary'>
+                         <h3>Go to Catalog and add product there!</h3>
+                     </div>
+                     : null
+                    }
+
                     {cart.map((prod) => (
                         <div className='prod-cart' key={prod._id}>
                             <img src={prod.image} alt={prod.title} />
@@ -30,7 +48,7 @@ function Cart() {
 
                 <div className='side'>
                     <h4>Total</h4>
-                    <h3>$9,999.00</h3>
+                    <h3>${getTotal()}</h3>
 
                     <button className='btn btn-primary'>Proceed to payment</button>
                 </div>

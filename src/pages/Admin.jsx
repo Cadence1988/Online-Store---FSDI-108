@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from 'react';
 import './Admin.css';
 
@@ -50,9 +51,26 @@ function Admin(){
                 console.log(coupon);
             }
 
+/**
+ * use effects -> load data
+ * load data retrieves the products from the server (through data)
+ * and puts the data into allProducts stat var
+ * very similar to catalog.jsx
+ */
+async function loadData() {        
+    let data = await DataService.getProducts();
+    setProducts(data);
+}       
+    
+    UseEffect(() => {
+        useLoaderData();
+    }, []);        
+
+
+
     return(
         <div className='admin page'>
-            <h1>Admin page</h1>
+            <h1>Store Administration</h1>
 
         <div className='parent'>
             <div className='form'>
@@ -92,6 +110,15 @@ function Admin(){
 }
 
 export default Admin;
+
+
+
+
+
+
+
+
+
 
 /**
  * coupon:
