@@ -3,12 +3,31 @@ import { createContext, useState } from "react";
 import DataContext from "./DataContext";
 
 
-export function GlobalProvider({ children }) {
-  const [user, setUser] = useState({ name: "Ryan Marlow" });
+function GlobalProvider(props) {
+  const [cart, setCart] = useState([]);
+  const [user, setUser] = useState({});
+
+  function addProductToCart() {
+
+  }
+
+  function removeProductFromCart(){
+
+  }
+
+  function clearCart(){
+
+  }
 
   return (
-    <DataContext.Provider value={{ user, setUser }}>
-      {children}
+    <DataContext.Provider value={{
+      cart: cart,
+      user: user,
+      addProductToCart: addProductToCart,
+      removeProductFromCart: removeProductFromCart,
+      clearCart: clearCart
+       }}>
+      {props.children}
     </DataContext.Provider>
   );
 }

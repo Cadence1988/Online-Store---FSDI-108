@@ -8,7 +8,7 @@ function Home() {
             <div className='text'>
             <h2>Welcome to Organika store</h2>
             
-            <Link className='btn btn-large '>
+            <Link className='btn btn-large btn-success'>
             </Link>
             </div>
 

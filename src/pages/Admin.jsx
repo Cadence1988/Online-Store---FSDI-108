@@ -1,15 +1,40 @@
 import axios from "axios";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Admin.css';
-
-
+import DataService from '../services/DataService';
 
 function Admin(){
+    const [allCoupons, setAllCoupons] =useState([]);
     const [coupon, setCoupon] = useState({
         code: "",
         discount:""
     });
 
+    const [allProducts, setAllProducts] = useState([]);
+    const [product, setProduct] = useState({
+        title: '',
+        price: '',
+        image: '',
+        Category: '',
+    });
+
+    function handleProduct(e) {
+        const text = e.target.value;
+        const name = e.target.name;
+
+        const copy = { ...product };
+        copy[name] = text;
+        setProduct(copy);;
+    }
+
+    function saveProduct() {
+        console.log(product);
+        //fix price
+        let copy = {...allProducts};
+        copy.push(product);
+        setAllProducts(copy);
+        //send the prod to the server
+    }
 
     function handleCoupon(e){
         const text = e.target.value;
@@ -59,12 +84,12 @@ function Admin(){
  */
 async function loadData() {        
     let data = await DataService.getProducts();
-    setProducts(data);
+    setProduct(data);
 }       
     
-    UseEffect(() => {
-        useLoaderData();
-    }, []);        
+   // useEffect(() => {
+   //     useLoaderData();
+   // }, []);        
 
 
 
