@@ -1,4 +1,5 @@
 import axios from "axios";
+
 export const catalog = [
   {
     title: "Tomatoes",
@@ -80,10 +81,10 @@ class DataService {
     return response.data;
   }
 
-  async saveProducts(products) {
+  async saveProduct(product) {
     let response = await axios.post(
       "http://127.0.0.1:5000/api/products",
-      products
+      product
     );
     return response.data;
   }

@@ -27,13 +27,19 @@ function Admin(){
         setProduct(copy);;
     }
 
-    function saveProduct() {
+    async function saveProduct() {
         console.log(product);
         //fix price
+        let fixedProd = {...product};
+        fixedProd.price = parseFloat(fixedProd.price);
+
         let copy = {...allProducts};
-        copy.push(product);
+        copy.push(fixedProd);
         setAllProducts(copy);
+
         //send the prod to the server
+        let resp = await DataService.saveProduct(fixedProd);
+        console.log(resp);
     }
 
     function handleCoupon(e){

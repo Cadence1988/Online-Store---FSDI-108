@@ -23,9 +23,13 @@ function Product(props) {
 
             <h5>{props.data.title}</h5>
             <label>Price per unit: ${props.data.price}</label>
+            <div className='prices'>
+                <label className='price'>Price <br/> <span><b>${(props.data.price).toFixed(2)}</b></span></label>
+                <label className='total'>Total <br/> <span><b>${getTotal()}</b></span></label>
+            </div>
 
             <div className='controls'>
-                <QuantityPicker onQuantityChange={handleQuantityChange}></QuantityPicker>
+                <QuantityPicker onChange={handleQuantityChange}></QuantityPicker>
 
                 <label>Total: ${totalPrice.toFixed(2)}</label>
                 <button className='btn btn-sm btn-primary' onClick={AddtoCart}>Add</button>
