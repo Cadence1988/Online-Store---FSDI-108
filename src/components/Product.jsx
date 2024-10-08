@@ -25,7 +25,7 @@ function Product(props) {
             <label>Price per unit: ${props.data.price}</label>
             <div className='prices'>
                 <label className='price'>Price <br/> <span><b>${(props.data.price).toFixed(2)}</b></span></label>
-                <label className='total'>Total <br/> <span><b>${getTotal()}</b></span></label>
+                <label className='total'>Total <br/> <span><b>${totalPrice.toFixed(2)}</b></span></label>
             </div>
 
             <div className='controls'>

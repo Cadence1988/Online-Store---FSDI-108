@@ -77,8 +77,12 @@ export const Category = ["Fruit", "Dairy", "Beverages"];
 
 class DataService {
   async getProducts() {
-    let response = await axios.get("http://127.0.0.1:5000/api/products");
+    let response = await axios.get("http://127.0.0.1:5000/api/catalog");
     return response.data;
+  }
+  catch(error) {
+    console.error("Error fetchin products", error);
+    throw error;
   }
 
   async saveProduct(product) {

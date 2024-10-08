@@ -1,6 +1,6 @@
 import Product from '../components/Product';
 import './Catalog.css';
-import {Catalog as Product, Category } from '../services/DataService';
+import DataService, {Catalog as product, Category } from '../services/DataService';
 import { useEffect, useState } from 'react';
 
 function Catalog() {
